@@ -1,3 +1,5 @@
+@import url("./colors.css");
+
 .form__container {
   display: flex;
   align-items: center;
@@ -6,9 +8,8 @@
 }
 
 .form__card {
-  background-color: #2d1e17;
+  background-color: var(--main-color);
   border-radius: 15px;
-  box-shadow: 0 5px 10px #55a6ff38;
   width: 100%;
   max-width: 45rem;
   padding: 1.75rem;
@@ -18,13 +19,13 @@
 
 .card__title {
   font-size: 2rem;
-  color: white;
+  color: var(--color-white);
   margin-bottom: 1rem;
 }
 
 .form__legend {
   font-size: 1.2rem;
-  color: white;
+  color: var(--color-white);
   margin-bottom: 1rem;
 }
 
@@ -54,7 +55,6 @@
   position: absolute;
   top: 1rem;
   left: 0.5rem;
-  font-size: var(--fonte-tamanho-input__label);
   transition: all .25s;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .input__container--invalid .input__label {
-  color: #df2525;
+  color: var(--error-color);
 }
 
 .input__message--error {
@@ -82,7 +82,7 @@
 }
 
 .input__container--invalid .input__message--error {
-  color: #df2525;
+  color: var(--error-color);
   display: block;
   margin-top: 0.5rem;
   padding-left: 0.5rem;

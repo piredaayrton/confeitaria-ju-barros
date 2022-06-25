@@ -1,7 +1,23 @@
-Projeto Doceria Ju Barros Confeitaria Artesanal.
+# Projeto Doceria Ju Barros Confeitaria Artesanal.
 
-Realizado para práticas habilidades de HTML, CSS e Javascript e eventualmente Typescript e React JS.
+Realizado para práticas habilidades de:
+* `HTML`;
+* `CSS`;
+* `JavaScript`;
+  * E eventualmente `Typescript` e `ReactJS`.
 
-Atualmente com uma página de apresentação, um menu de produtos e uma página de cadastro.
+Atualmente o projeto possui uma página de apresentação, um menu de produtos e uma página de cadastro.
 
-Próximo passo atualizar página de produtos com uma seção de carrinho.
+## Próximos passos:
+- Adicionar seção de carrinho:
+  - Lista de produtos e quantidades a serem comprados, inicialmente utilizando `localStorage`.
+
+## Rodando o projeto:
+
+1. Clone este repositório
+
+```bash
+$ git clone https://github.com/piredaayrton/confeitaria-ju-barros.git
+```
+
+2. Abrir, no navegador, o arquivo `index.html`.
