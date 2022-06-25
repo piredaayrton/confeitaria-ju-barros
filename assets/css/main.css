@@ -1,7 +1,6 @@
 body {
-  background-color: #2d1e17;
-  color: #2d1e17;
-  font-family: 'Open Sans', 'icones', sans-serif;
+  background-image: url(../images/background-image.png);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .header {
@@ -29,7 +28,7 @@ body {
   background-color: #2d1e17;
   width: 75vw;
   height: 100vh;
-  top: 35px;
+  top: 55px;
   position: absolute;
   left: -100vw;
   transition: .25s;
@@ -47,7 +46,8 @@ body {
   padding-left: 30px;
   display: flex;
   align-items: center;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5) ;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
 }
 
 .lateral__menu__link--active {
@@ -61,7 +61,6 @@ body {
 }
 
 .principal {
-  background-image: url(../images/background-image.png);
   color: black;
   padding: 0 10px;
   display: grid;
@@ -103,6 +102,7 @@ body {
   overflow: hidden;
   background-color: #2d1e17;
   margin: 1rem auto;
+  text-align: center;
 }
 
 .card__image {
@@ -110,6 +110,9 @@ body {
 }
 
 .card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 
@@ -130,9 +133,14 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
+  padding: 0 1rem;
 }
 
 /*footer*/
+
+.footer__container {
+  background-color: #2d1e17;
+}
 
 .footer {
   padding-top: 1rem;
@@ -165,7 +173,8 @@ body {
 .copyright {
   color: white;
   text-align: center;
-  margin: 2rem auto;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
   line-height: 1.5;
 }
 
@@ -181,8 +190,39 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .presentation {
-    background-image: url(../images/banner-background.jpg);
+  .header > button {
+    display: none;
+  }
+  
+  .menu__list > li > a > i {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex;
+  }
+
+  .lateral__menu {
+    height: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: relative;
+    align-items: center;
+  }
+
+  .lateral__menu__link {
+    border: none;
+  }
+
+  .lateral__menu__link--active {
+    text-decoration: underline;
+    padding-left: 30px;
+  }
+
+  .principal {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .card {

@@ -4,26 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ju Barros Confeitaria Artesanal</title>
+    
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"> 
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/presentation.css">
     <link rel="stylesheet" href="./assets/css/showcase.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
     <script src="https://kit.fontawesome.com/4a316f8b1d.js" crossorigin="anonymous"></script>
+
+    <title>Ju Barros Confeitaria Artesanal</title>
   </head>
   <body>
     
     <header class="header">
-      <button data-menu aria-label="Menu"><i class="fa-solid fa-bars lateral__menu__icon"></i></button>
+      <button data-menu aria-label="Menu">
+        <i class="fa-solid fa-bars lateral__menu__icon"></i>
+      </button>
+      
       <nav class="lateral__menu" data-lateral-menu>
-        <ul>
-          <li><a href="./index.html" class="lateral__menu__link lateral__menu__link--home lateral__menu__link--active"><i class="fa-solid fa-house lateral__menu__icon"></i>Home</a></li>
-          <li><a href="./menu.html" class="lateral__menu__link lateral__menu__link--menu"><i class="fa-solid fa-cake-candles lateral__menu__icon"></i>Cardápio</a></li>
-          <li><a href="./registration.html" class="lateral__menu__link lateral__menu__link--contact"><i class="fa-solid fa-address-book lateral__menu__icon"></i>Cadastro</a></li>
+        <ul class="menu__list">
+          <li>
+            <a 
+              href="./index.html" 
+              class="lateral__menu__link lateral__menu__link--home lateral__menu__link--active">
+                <i class="fa-solid fa-house lateral__menu__icon"></i>
+                Home
+            </a>
+          </li>
+          <li>
+            <a
+             href="./products.html"
+              class="lateral__menu__link lateral__menu__link--menu">
+                <i class="fa-solid fa-cake-candles lateral__menu__icon"></i>
+                Cardápio
+              </a>
+          </li>
+          <li>
+            <a
+             href="./registration.html"
+              class="lateral__menu__link lateral__menu__link--contact">
+                <i class="fa-solid fa-address-book lateral__menu__icon"></i>
+                Cadastro
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,7 +54,7 @@
     <main>
       <div class="principal">
         <section class="presentation">
-          <a href="./index.html"><img src="./assets/images/background-logo.png" alt="" class="presentation__logo"></a>
+          <a href="./index.html" title="Home"><img src="./assets/images/background-logo.png" alt="Logo da confeitaria artesanal Ju Barros" class="presentation__logo"></a>
           <p class="presentation__text">Doces feitos com amor para adoçar sua vida.</p>
           <h2 class="main__titles">Confira alguns de nossos produtos</h2>
         </section>
@@ -39,34 +62,42 @@
         <section>
           <div class="showcase">
             <article class="card">
-              <img src="./assets/images/bolo-patati-patata.jpg" alt="" class="card__image">
+              <img src="./assets/images/bolo-patati-patata.jpg" alt="Bolo Patati Patata" class="card__image">
               <div class="card__content">
                 <h3 class="card__product-title">Bolos</h3>
-                <button class="card__button">Confira mais produtos desse tipo</button>
+                <a href="./products.html">
+                  <button class="card__button">Confira mais produtos</button>
+                </a>
               </div>
             </article>
 
             <article class="card">
-              <img src="./assets/images/tortas.jpg" alt="" class="card__image">
+              <img src="./assets/images/tortas.jpg" alt="Torta" class="card__image">
               <div class="card__content">
                 <h3 class="card__product-title">Tortas</h3>
-                <button class="card__button">Confira mais produtos desse tipo</button>
+                <a href="./products.html">
+                  <button class="card__button">Confira mais produtos</button>
+                </a>
               </div>
             </article>
 
             <article class="card">
-              <img src="./assets/images/trufas.jpg" alt="" class="card__image">
+              <img src="./assets/images/torta-limao.jpg" alt="Trufas" class="card__image">
               <div class="card__content">
                 <h3 class="card__product-title">Trufas</h3>
-                <button class="card__button">Confira mais produtos desse tipo</button>
+                <a href="./products.html">
+                  <button class="card__button">Confira mais produtos</button>
+                </a>
               </div>
             </article>
 
             <article class="card">
-              <img src="./assets/images/macarons.jpg" alt="" class="card__image">
+              <img src="./assets/images/macarons.jpg" alt="Macaros" class="card__image">
               <div class="card__content">
                 <h3 class="card__product-title">Macarons</h3>
-                <button class="card__button">Confira mais produtos desse tipo</button>
+                <a href="./products.html">
+                  <button class="card__button">Confira mais produtos</button>
+                </a>
               </div>
             </article>
           </div>
@@ -88,20 +119,21 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="footer__container">
       <article class="footer">
-        <a href="./index.html"><img src="./assets/images/logo.png" alt="" class="footer__logo"></a>
+        <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo da confeitaria artesanal Ju Barros" class="footer__logo"></a>
         <div class="social__medias">
           <h2 class="footer__title">Confira também nossas redes sociais:</h2>
           <ul class="footer__social">
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-facebook footer__icon"></i></a></li>
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-instagram footer__icon"></i></a></li>
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-whatsapp footer__icon"></i></a></li>
+            <li><a href="https://www.facebook.com/jubarros.c.a" class="footer__midia"><i class="fa-brands fa-facebook footer__icon"></i></a></li>
+            <li><a href="https://www.instagram.com/ju_barrosconfeitaria/" class="footer__midia"><i class="fa-brands fa-instagram footer__icon"></i></a></li>
+            <li><a href="tel:+5521985708106" class="footer__midia"><i class="fa-brands fa-whatsapp footer__icon"></i></a></li>
           </ul>
         </div>
       </article>
       <p class="copyright">&copy; Copyright Ju Barros Confeitaria Artesanal - 2022</p>
     </footer>
-    <script src="./index.js"></script>
+    
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

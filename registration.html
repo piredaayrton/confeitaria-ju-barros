@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ju Barros Confeitaria Artesanal</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"> 
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/registration.css">
     <script src="https://kit.fontawesome.com/4a316f8b1d.js" crossorigin="anonymous"></script>
@@ -16,12 +13,35 @@
   <body>
     
     <header class="header">
-      <button data-menu aria-label="Menu"><i class="fa-solid fa-bars lateral__menu__icon"></i></button>
+      <button data-menu aria-label="Menu">
+        <i class="fa-solid fa-bars lateral__menu__icon"></i>
+      </button>
+
       <nav class="lateral__menu" data-lateral-menu>
-        <ul>
-          <li><a href="./index.html" class="lateral__menu__link lateral__menu__link--home"><i class="fa-solid fa-house lateral__menu__icon"></i>Home</a></li>
-          <li><a href="./menu.html" class="lateral__menu__link lateral__menu__link--menu"><i class="fa-solid fa-cake-candles lateral__menu__icon"></i>Cardápio</a></li>
-          <li><a href="./registration.html" class="lateral__menu__link lateral__menu__link--contact lateral__menu__link--active"><i class="fa-solid fa-address-book lateral__menu__icon"></i>Cadastro</a></li>
+        <ul class="menu__list">
+          <li>
+            <a
+             href="./index.html" 
+             class="lateral__menu__link lateral__menu__link--home">
+              <i class="fa-solid fa-house lateral__menu__icon"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+             href="./products.html" 
+             class="lateral__menu__link lateral__menu__link--menu">
+              <i class="fa-solid fa-cake-candles lateral__menu__icon"></i>
+              Cardápio
+            </a>
+          </li>
+          <li>
+            <a href="./registration.html" 
+            class="lateral__menu__link lateral__menu__link--contact lateral__menu__link--active">
+              <i class="fa-solid fa-address-book lateral__menu__icon"></i>
+              Cadastro
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -29,7 +49,7 @@
     <main>
       <div class="principal">
         <section class="presentation">
-          <a href="./index.html"><img src="./assets/images/background-logo.png" alt="" class="presentation__logo"></a>
+          <a href="./index.html" title="Home"><img src="./assets/images/background-logo.png" alt="Logo da confeitaria artesanal Ju Barros" class="presentation__logo"></a>
           <p class="presentation__text">Doces feitos com amor para adoçar sua vida.</p>
           <h2 class="main__titles">Cadastre-se para receber nossas promoções por email.</h2>
         </section>
@@ -37,11 +57,11 @@
         <div class="form__container">
           <section class="form__card">
             <h2 class="card__title">Complete seu cadastro</h2>
-            <form action="./cadastro_concluido.html">
+            <form action="">
               <fieldset>
                 <legend class="form__legend">Informações básicas</legend>
                 <div class="input__container">
-                  <input name="nome" id="nome" class="input" type="text" placeholder="Nome" data-type="name" required>
+                  <input name="name" id="name" class="input" type="text" placeholder="Nome" data-type="name" required>
                   <label class="input__label" for="nome">Nome</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
@@ -51,8 +71,8 @@
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
                 <div class="input__container">
-                  <input name="senha" id="senha" class="input" type="password" placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-type="password" required>
-                  <label class="input__label" for="senha">Senha</label>
+                  <input name="password" id="password" class="input" type="password" placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-type="password" required>
+                  <label class="input__label" for="password">Senha</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
               </fieldset>
@@ -64,7 +84,7 @@
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
                 <div class="input__container">
-                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" data-tipo="cpf" required>
+                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" data-type="cpf" required>
                   <label class="input__label" for="cpf">CPF</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
@@ -72,23 +92,23 @@
               <fieldset>
                 <legend class="form__legend">Endereço</legend>
                 <div class="input__container">
-                  <input name="cep" id="cep" class="input" type="text" placeholder="CEP" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep" required>
+                  <input name="cep" id="cep" class="input" type="text" placeholder="CEP" pattern="[\d]{5}-?[\d]{3}" data-type="cep" required>
                   <label class="input__label" for="cep">CEP</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
                 <div class="input__container">
-                  <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro" data-tipo="logradouro" required>
-                  <label class="input__label" for="logradouro">Logradouro</label>
+                  <input name="public__place" id="public__place" class="input" type="text" placeholder="Logradouro" data-type="publicPlace" required>
+                  <label class="input__label" for="public__place">Logradouro</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
                 <div class="input__container">
-                  <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade" data-tipo="cidade" required>
-                  <label class="input__label" for="cidade">Cidade</label>
+                  <input name="city" id="city" class="input" type="text" placeholder="Cidade" data-type="city" required>
+                  <label class="input__label" for="city">Cidade</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
                 <div class="input__container">
-                  <input name="estado" id="estado" class="input" type="text" placeholder="Estado" data-tipo="estado" required>
-                  <label class="input__label" for="estado">Estado</label>
+                  <input name="state" id="state" class="input" type="text" placeholder="Estado" data-type="state" required>
+                  <label class="input__label" for="state">Estado</label>
                   <span class="input__message--error">Este campo não está válido</span>
                 </div>
               </fieldset>
@@ -99,21 +119,22 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="footer__container">
       <article class="footer">
-        <a href="./index.html"><img src="./assets/images/logo.png" alt="" class="footer__logo"></a>
+        <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo da confeitaria artesanal Ju Barros" class="footer__logo"></a>
         <div class="social__medias">
           <h2 class="footer__title">Confira também nossas redes sociais:</h2>
           <ul class="footer__social">
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-facebook footer__icon"></i></a></li>
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-instagram footer__icon"></i></a></li>
-            <li><a href="#" class="footer__midia"><i class="fa-brands fa-whatsapp footer__icon"></i></a></li>
+            <li><a href="https://www.facebook.com/jubarros.c.a" class="footer__midia"><i class="fa-brands fa-facebook footer__icon"></i></a></li>
+            <li><a href="https://www.instagram.com/ju_barrosconfeitaria/" class="footer__midia"><i class="fa-brands fa-instagram footer__icon"></i></a></li>
+            <li><a href="tel:+5521985708106" class="footer__midia"><i class="fa-brands fa-whatsapp footer__icon"></i></a></li>
           </ul>
         </div>
       </article>
       <p class="copyright">&copy; Copyright Ju Barros Confeitaria Artesanal - 2022</p>
     </footer>
-    <script src="./index.js"></script>
-    <script src="./app.js" type="module"></script>
+    
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
   </body>
 </html>
